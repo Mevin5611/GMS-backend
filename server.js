@@ -5,6 +5,7 @@ const multer = require('multer');
 const path = require('path');
 const { v4: uuidv4 } = require('uuid');
 const twilio = require('twilio');
+const cors = require('cors')
 
 
 const workoutsroutes=require('./routes/workouts')
@@ -27,6 +28,12 @@ next()
 
 app.use(express.json())
 
+app.use(
+  cors({
+    origin:["https://gms-frontend-iota.vercel.app"],
+    credentials:true,
+  })
+);
 // Define storage for Multer
 
 // Serve uploaded files statically
