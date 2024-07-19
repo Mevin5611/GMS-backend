@@ -30,7 +30,7 @@ app.use(express.json())
 
 app.use(
   cors({
-    origin:["https://gms-frontend-iota.vercel.app"],
+    origin:["https://gms-frontend-iota.vercel.app", "https://www.astheticfitness.in"],
     credentials:true,
   })
 );
